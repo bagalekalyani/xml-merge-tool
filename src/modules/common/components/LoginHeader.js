@@ -9,19 +9,19 @@ import {bindActionCreators} from "redux";
 
 class LoginHeader extends Component {
 
-    render() {
-         
-        return (
-            <Navbar inverse fixedTop fluid>
-                <Navbar.Header>
-                    <Navbar.Brand>
-                        <img src="img/logo.png" alt="" className="logo"/>
-                    </Navbar.Brand>
-                </Navbar.Header>
-            </Navbar>
-        );
+  render() {
 
-    }
+    return (
+      <Navbar inverse fixedTop fluid>
+        <Navbar.Header>
+          <Navbar.Brand>
+            <img src="img/logo.png" alt="" className="logo"/>
+          </Navbar.Brand>
+        </Navbar.Header>
+      </Navbar>
+    );
+
+  }
 
 }
 

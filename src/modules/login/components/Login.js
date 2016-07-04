@@ -15,7 +15,7 @@ class Login extends Component {
     return (
       <div className="login-screen">
 
-        <LoginHeader/>
+        <LoginHeader />
 
         <Grid fluid>
           <Row>
