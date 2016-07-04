@@ -3,7 +3,7 @@
 import React, {Component} from "react";
 import {RouteHandler} from "react-router";
 import {connect} from "react-redux";
-import {Panel, Input, Glyphicon, Grid, Row, Col, Button} from "react-bootstrap";
+import {Panel, Input, Glyphicon, Grid, Row, Col, Button, Jumbotron} from "react-bootstrap";
 import {Element} from "react-scroll";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import LoginHeader from "../../common/components/LoginHeader";
@@ -13,37 +13,58 @@ class Login extends Component {
   render() {
 
     return (
-      <div>
+      <div className="login-screen">
 
         <LoginHeader/>
-      
-        <Grid>
+
+        <Grid fluid>
           <Row>
-            <Col md={4} mdPush={4} sm={8} smPush={1} xs={12}>
-              <form>
-                <Row>
-                  <Col>
-                    <Input type="text"
-                           addonBefore={<Glyphicon glyph="user" />}
-                           placeholder="Username"/>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col>
-                    <Input type="text"
-                           addonBefore={<Glyphicon glyph="lock" />}
-                           placeholder="Password"/> 
-                  </Col>
-                </Row>
-                <Row>
-                  <Col>
-                    <Button type="submit" bsStyle="primary">
-                        LOGIN
-                    </Button>
-                  </Col>
-                </Row>
-              </form>
-            </Col>
+            <Jumbotron className="text-center">
+
+              <Grid>
+                <form>
+                  <Row>
+
+                    <Col lg={6} lgPush={3} md={6} mdPush={3} sm={8} smPush={2} xs={12} className="login-box">
+                      <div className="login-label text-center">LOGIN</div>
+                      <Grid>
+                        <Row>
+                          <Col xs={12}>
+                            <Input type="text"
+                                   addonBefore={<Glyphicon glyph="user" />}
+                                   placeholder="Username"/>
+                          </Col>
+                        </Row>
+                        <Row>
+                          <Col xs={12}>
+                            <Input type="password"
+                                   addonBefore={<Glyphicon glyph="lock" />}
+                                   placeholder="Password"/>
+                          </Col>
+                        </Row>
+                        <Row>
+                          <Col xs={12} sm={12} md={12}>
+                            <Button bsStyle="primary" bsSize="large"
+                                    className="full-width">
+                                LOGIN
+                            </Button>
+                          </Col>
+                        </Row>
+                        <Row>
+                          <Col xs={12} sm={12} mg={12}>
+                              <div className="forgot-password  text-center">
+                                  Forgot Password?
+                              </div>
+                          </Col>
+                        </Row>
+                      </Grid>
+                    </Col>
+
+                  </Row>
+                </form>
+              </Grid>
+
+            </Jumbotron>
           </Row>
         </Grid>
 
