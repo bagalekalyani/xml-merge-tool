@@ -81,3 +81,46 @@ body {
 .pointer{
   cursor: pointer;
 }
+
+.wrap {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+.logo-404 {
+    margin-top: 50px;
+}
+
+.logo-404 h1 {
+    font-family: 'Courgette', cursive;
+    font-size: 200px;
+    color: #8F8E8C;
+    text-align: center;
+    margin-bottom: 1px;
+    text-shadow: 1px 1px 6px #fff;
+}
+
+.logo-404 p {
+    color: rgb(228, 146, 162);
+    font-size: 20px;
+    font-family: 'Courgette', cursive;
+    margin-top: 1px;
+    text-align: center;
+}
+
+.logo-404 p span {
+    color: lightgreen;
+}
+
+.sub a {
+    color: white;
+    background: #8F8E8C;
+    text-decoration: none;
+    padding: 7px 120px;
+    font-size: 13px;
+    font-family: arial, serif;
+    font-weight: bold;
+    -webkit-border-radius: 3em;
+    -moz-border-radius: .1em;
+    -border-radius: .1em;
+}

@@ -31,7 +31,7 @@ class CustomerList extends Component {
             <td>11</td>
             <td>
               <Glyphicon glyph="folder-open pointer"/>
-              <Glyphicon glyph="minus-sign" className="left-buffer"/>
+              <Glyphicon glyph="minus-sign pointer" className="left-buffer"/>
               <Glyphicon glyph="open pointer" className="left-buffer"/>
             </td>
           </tr>
@@ -42,7 +42,7 @@ class CustomerList extends Component {
             <td>55</td>
             <td>
               <Glyphicon glyph="folder-open pointer"/>
-              <Glyphicon glyph="minus-sign" className="left-buffer"/>
+              <Glyphicon glyph="minus-sign pointer" className="left-buffer"/>
               <Glyphicon glyph="open pointer" className="left-buffer"/>
             </td>
           </tr>
@@ -53,7 +53,7 @@ class CustomerList extends Component {
             <td>8</td>
             <td>
               <Glyphicon glyph="folder-open pointer"/>
-              <Glyphicon glyph="minus-sign" className="left-buffer"/>
+              <Glyphicon glyph="minus-sign pointer" className="left-buffer"/>
               <Glyphicon glyph="open pointer" className="left-buffer"/>
             </td>
           </tr>
