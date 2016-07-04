@@ -76,7 +76,7 @@ gulp.task('clear', function() {
 gulp.task('copy', function() {
   gulp.src(srcPath + "/img/**/*.*").pipe(gulp.dest(distPath + "/img"));
   gulp.src(srcPath + "/img/*.*").pipe(gulp.dest(distPath + "/img"));
-  gulp.src(srcPath + "/css/glyphicons/*.*").pipe(gulp.dest(distPath + "/glyphicons"));
+  gulp.src(srcPath + "/css/fonts/*.*").pipe(gulp.dest(distPath + "/fonts"));
   gulp.src(srcPath + "/css/font-awesome/*.*").pipe(gulp.dest(distPath + "/font-awesome/fonts"));
   return gulp.src(srcPath + "/*.html").pipe(gulp.dest(distPath));
 });
