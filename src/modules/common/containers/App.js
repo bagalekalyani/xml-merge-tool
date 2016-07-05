@@ -1,6 +1,5 @@
 import React from "react";
 import {connect} from "react-redux";
-
 class App extends React.Component {
 
   render() {
@@ -10,9 +9,7 @@ class App extends React.Component {
         <div className="container-fluid">
           {this.props.children}
         </div>
-
       </div>
-
     );
 
   }

@@ -2,7 +2,7 @@
 
 import React, {Component} from "react";
 import {push} from "redux-router";
-import {Navbar, NavItem, Nav} from 'react-bootstrap';
+import {Navbar, NavItem, Nav, NavDropdown, MenuItem} from 'react-bootstrap';
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 
@@ -24,6 +24,10 @@ class LoginHeader extends Component {
         <Navbar.Collapse>
           <Nav pullRight>
             <NavItem eventKey={1} onClick={this.gotoCustomerListing.bind(this)}>Customers</NavItem>
+            <NavDropdown eventKey={2} title="Customers" id="basic-nav-dropdown">
+              <MenuItem eventKey={2.1}>Add New Customer</MenuItem>
+              <MenuItem eventKey={2.2}>Customer List</MenuItem>
+            </NavDropdown>
             <NavItem eventKey={2} href="#">Configurations</NavItem>
             <NavItem eventKey={3} href="#">Merge Scenarios</NavItem>
             <NavItem eventKey={4} href="#">Admin</NavItem>
