@@ -128,3 +128,15 @@ body {
 .bottom-buffer-20{
   margin-bottom: 20px;
 }
+
+.text-danger {
+    position: absolute;
+    bottom: 36px;
+    z-index: 9;
+    font-size: 15px;
+}
+
+.login-tbox {
+    position: relative;
+    margin-bottom: 30px;
+}

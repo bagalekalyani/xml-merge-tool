@@ -12,13 +12,18 @@ class CustomerList extends Component {
 
   render() {
 
+    onAddCustomer(){
+      alert("qwertt");
+    }
+
     return (
 
       <Grid fluid>
         <Row>
           <Col xs={12} sm={12} md={12} lg={12}>
               <Button bsStyle="primary"
-                      className="bottom-buffer-20 pull-right">
+                      className="bottom-buffer-20 pull-right"
+                      onClick={this.onAddCustomer.bind(this)}>
                   <Glyphicon glyph="plus"/> Add Customer
               </Button>
           </Col>
