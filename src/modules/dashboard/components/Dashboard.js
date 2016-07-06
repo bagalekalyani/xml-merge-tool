@@ -2,8 +2,17 @@
 
 import React, {Component, View} from "react";
 import {Panel, Input, Glyphicon, Grid, Row, Col, Button, Jumbotron} from "react-bootstrap";
+import * as headerActionCreators from "../../header/actions/header";
+import {connect} from "react-redux";
+import {bindActionCreators} from "redux";
 
 class Dashboard extends Component {
+
+  componentDidMount() {
+
+    this.props.headerActions.setHeaderActiveTab('');
+
+  }
 
   render() {
 
@@ -21,4 +30,13 @@ class Dashboard extends Component {
 
 }
 
-export default Dashboard;
+const mapStateToProps = (state) => ({
+  headerActiveTab: state.header.headerActiveTab,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  headerActions: bindActionCreators(headerActionCreators, dispatch)
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
+

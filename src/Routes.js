@@ -17,6 +17,8 @@ var Routes = (
       <Route path="home" component={Home}>
         <IndexRoute component={Dashboard}/>
         <Route path="customers" component={CustomerList}/>
+
+
       </Route>
 
       <Route path="*" component={PageNotFoundError}/>

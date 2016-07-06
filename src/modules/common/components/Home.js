@@ -4,7 +4,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import {push} from "redux-router";
-import Header from "./Header";
+import Header from "../../header/components/Header";
 import Footer from "./Footer";
 
 class Home extends Component {
