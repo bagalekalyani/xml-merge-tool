@@ -5,11 +5,13 @@ import {push} from "redux-router";
 import {Navbar, NavItem, Nav, NavDropdown, MenuItem} from 'react-bootstrap';
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
+import * as headerActionCreators from "../actions/header";
 
 class LoginHeader extends Component {
 
   gotoCustomerListing(){
     this.props.routeDispatch(push("/home/customers"));
+    this.props.headerActions.setHeaderActiveTab('customers');
   }
 
   render() {
@@ -23,7 +25,7 @@ class LoginHeader extends Component {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav pullRight>
-            <NavItem eventKey={1} onClick={this.gotoCustomerListing.bind(this)}>Customers</NavItem>
+            <NavItem eventKey={1} onClick={this.gotoCustomerListing.bind(this)} className={this.props.headerActiveTab == 'customers' ? 'active' : ''}>Customers</NavItem>
             <NavDropdown eventKey={2} title="Customers" id="basic-nav-dropdown">
               <MenuItem eventKey={2.1}>Add New Customer</MenuItem>
               <MenuItem eventKey={2.2}>Customer List</MenuItem>
@@ -43,10 +45,12 @@ class LoginHeader extends Component {
 }
 
 const mapStateToProps = (state) => ({
+  headerActiveTab: state.header.headerActiveTab,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  routeDispatch: dispatch
+  routeDispatch: dispatch,
+  headerActions: bindActionCreators(headerActionCreators, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(LoginHeader);
