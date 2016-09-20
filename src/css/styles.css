@@ -1,13 +1,263 @@
 body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
   padding-top: 70px;
+  padding-bottom: 70px;
 }
 
 .logo {
   padding: 10px;
 }
 
-@media screen and (max-width: 768px) {
-    body { padding-top: 0px; }
+.login-logo-img {
+  margin: 5px 0 27px 0;
+}
+
+.login-box {
+  color: #fff !important;
+  background-color: rgb(33, 33, 33) !important;
+  border-color: #000000 !important;
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border-radius: 3px;
+  font-size: 18px;
+  padding: 20px 40px;
+}
+
+.forgot-password {
+  color: #fff !important;
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 10px 40px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-style: italic;
+}
+
+.forgot-password:hover {
+  color: #46b8da !important;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.left-buffer {
+  margin-left: 10px;
+}
+
+.right-buffer {
+  margin-right: 10px;
+}
+
+.top-buffer {
+  margin-top: 10px;
+}
+
+.bottom-buffer {
+  margin-bottom: 10px;
+}
+
+.login-screen .jumbotron {
+  background-color: transparent;
+}
+
+.footer {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background-color: black;
+  padding: 15px 0px;
+  text-align: center;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.wrap {
+  margin: 0 auto;
+  width: 1000px;
+}
+
+.logo-404 {
+  margin-top: 50px;
+}
+
+.logo-404 h1 {
+  font-family: 'Courgette', cursive;
+  font-size: 200px;
+  color: #8F8E8C;
+  text-align: center;
+  margin-bottom: 1px;
+  text-shadow: 1px 1px 6px #fff;
+}
+
+.logo-404 p {
+  color: rgb(228, 146, 162);
+  font-size: 20px;
+  font-family: 'Courgette', cursive;
+  margin-top: 1px;
+  text-align: center;
+}
+
+.logo-404 p span {
+  color: lightgreen;
+}
+
+.sub a {
+  color: white;
+  background: #8F8E8C;
+  text-decoration: none;
+  padding: 7px 120px;
+  font-size: 13px;
+  font-family: arial, serif;
+  font-weight: bold;
+  -webkit-border-radius: 3em;
+  -moz-border-radius: .1em;
+  -border-radius: .1em;
+}
+
+.bottom-buffer-20{
+  margin-bottom: 20px;
+}
+
+.text-danger {
+  position: absolute;
+  bottom: 36px;
+  z-index: 9;
+  font-size: 15px;
+}
+
+.login-tbox {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.app-mask {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.spinner {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  margin: 250px auto;
+  z-index: 999999;
+}
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #333;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+    0%, 100% {
+        -webkit-transform: scale(0.0)
+    }
+    50% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes sk-bounce {
+    0%, 100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    }
+    50% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+}
+
+.text-red {
+  color: #FF0000;
+}
+
+.error-text {
+  color: #a94442
+}
+
+.fileUpload {
+  margin-left: 14px;
+}
+
+.fileUpload input.upload {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  cursor: pointer;
+  opacity: 0;
+  width: 15px;
+  filter: alpha(opacity=0);
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1000px) {
+  .logo {
+    padding: 17px;
+  }
+}
+
+.success-msg {
+  color: #3c763d;
+}
+
+.danger-msg {
+  color: #a94442;
+}
+
+.table-header {
+  background-color: #f9f9f9;
+}
+
+.record-not-found-block {
+  font-size: 22px;
+  text-align: center;
+  opacity: 0.3;
+  color: rgb(255, 152, 0);
+  font-weight: bold;
+}
+
+.top-pagination{
+  margin: 2px 0 0 0 !important;
+}
+
+.back-arrow-icon{
+  font-size: 30px;
+}
+
+.actions-icon{
+  font-size: 16px;
+}
+
+.text-blue{
+  color: #337ab7;
+}
+
+.dropdown-menu-right {
+    right: 0 !important;
 }

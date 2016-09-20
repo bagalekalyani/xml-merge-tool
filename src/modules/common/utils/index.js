@@ -1,5 +1,5 @@
 import React from "react";
-import config from "../config";
+import config from "../../config";
 import fetch from "isomorphic-fetch";
 
 export function createConstants(...constants) {
@@ -31,59 +31,4 @@ export function parseJSON(response) {
   return response.json()
 }
 
-export function get(nodeURL) {
-  return fetch(config.BASE_URL + nodeURL, {
-    method: 'get',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json',
-    }
 
-  }).then(checkHttpStatus)
-    .then(parseJSON)
-    .then(result => {
-      return result;
-    })
-    .catch(error => {
-      throw error;
-    })
-}
-
-export function post(nodeURL, data) {
-  return fetch(config.BASE_URL + nodeURL, {
-    method: 'post',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data)
-
-  }).then(checkHttpStatus)
-    .then(parseJSON)
-    .then(result => {
-      return result;
-    })
-    .catch(error => {
-      throw error;
-    })
-}
-
-
-export function put(nodeURL, data) {
-  return fetch(config.BASE_URL + nodeURL, {
-    method: 'put',
-    headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data)
-
-  }).then(checkHttpStatus)
-    .then(parseJSON)
-    .then(result => {
-      return result;
-    })
-    .catch(error => {
-      throw error;
-    })
-}

@@ -1,5 +1,6 @@
 import React from "react";
 import {connect} from "react-redux";
+import AppMaskLoader from "../../common/components/AppMaskLoader";
 
 class App extends React.Component {
 
@@ -9,10 +10,9 @@ class App extends React.Component {
       <div>
         <div className="container-fluid">
           {this.props.children}
+          <AppMaskLoader show={this.props.loading}/>
         </div>
-
       </div>
-
     );
 
   }
@@ -20,6 +20,7 @@ class App extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
+  loading: state.app.loading
 });
 
 
