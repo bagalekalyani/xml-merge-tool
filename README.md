@@ -10,6 +10,11 @@ XML comapre and merge tool
 
 ### Build Steps
 
+  * $>npm install
   * $>gulp
+
+### How to run
+
+  * http://localhost:4200/
 
 
